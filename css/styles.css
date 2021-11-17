@@ -1,0 +1,270 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: #ededed;
+  font-family: "Dosis", sans-serif;
+  box-sizing: border-box;
+  scroll-snap-type: y proximity;
+  scrollbar-width: none;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.landing {
+  background-color: black;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+}
+
+.slider {
+  max-height: 100vh;
+  max-width: 100vw;
+  position: relative;
+}
+
+#slider-bg {
+  height: 100%;
+  width: 100%;
+}
+
+.profile {
+  scroll-snap-align: start;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 2fr 8fr;
+  align-items: center;
+}
+.profile .prof-wave {
+  position: absolute;
+  top: -5%;
+  left: -20%;
+  width: 120%;
+  overflow: hidden;
+  line-height: 0;
+}
+.profile .prof-wave svg {
+  position: relative;
+  display: block;
+  width: calc(230% + 1.3px);
+  height: 500px;
+  animation: profWaving 8s infinite ease-in-out;
+}
+.profile .prof-wave .shape-fill {
+  fill: gray;
+  opacity: 0.9;
+}
+.profile .back svg {
+  animation: profWaving 12s infinite ease-in-out;
+  height: 500px;
+}
+.profile .back .shape-fill {
+  fill: rgba(0, 0, 0, 0.767);
+}
+@keyframes profWaving {
+  0% {
+    height: 450px;
+  }
+  50% {
+    height: 525px;
+  }
+  100% {
+    height: 450px;
+  }
+}
+.profile .top-container {
+  display: grid;
+  grid-row: 1;
+  grid-column: 1/span 3;
+  padding: 2vh 2vw;
+  /* height: 10vh; */
+  z-index: 4;
+}
+.profile .top-container h1 {
+  color: #ededed;
+  text-align: left;
+  margin: 0;
+  padding-left: 10px;
+  max-height: 100%;
+}
+.profile .prof-img {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+  text-align: center;
+  width: 60%;
+  padding-left: 2vw;
+}
+.profile .prof-img img {
+  min-width: 350px;
+}
+.profile .profile-text {
+  display: grid;
+  grid-column: 2/span 3;
+  grid-row: 2;
+  text-align: center;
+  width: 90%;
+}
+.profile #me-pic {
+  width: 80%;
+  border-radius: 5%;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 8fr 2fr;
+    align-items: start;
+    justify-items: center;
+  }
+  .profile .prof-img {
+    grid-column: 1;
+    grid-row: 2;
+    justify-items: center;
+    padding-bottom: 2vh;
+  }
+  .profile .profile-text {
+    grid-column: 1;
+    grid-row: 3;
+    width: 70%;
+    justify-items: center;
+  }
+}
+.info {
+  scroll-snap-align: start;
+  position: relative;
+  height: 92vh;
+  width: 100vw;
+  padding-left: 20px;
+  background-color: #1a1a1a;
+  scroll-snap-type: y mandatory;
+  color: #ededed;
+}
+.info #section2-title {
+  position: absolute;
+  padding-top: 30px;
+}
+.info .waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.info .waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 90px;
+  animation: waving 8s infinite ease-in-out;
+}
+.info .waves .shape-fill {
+  fill: #ededed;
+}
+@keyframes waving {
+  0% {
+    height: 90px;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 90px;
+  }
+}
+.info .projects {
+  display: grid;
+  height: 80vh;
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 10vh;
+}
+.info .projects .project-1 {
+  display: flex;
+  width: 60%;
+  grid-row: 1;
+  grid-column: 1;
+  flex-direction: column;
+  text-align: right;
+  margin-left: auto;
+}
+.info .projects .p1-right {
+  display: grid;
+  grid-row: 1;
+  grid-column: 2;
+  justify-items: start;
+  padding-left: 2vw;
+}
+.info .projects .project-2 {
+  display: flex;
+  width: 60%;
+  grid-row: 2;
+  grid-column: 2;
+  flex-direction: column;
+  text-align: left;
+}
+.info .projects .p2-left {
+  display: grid;
+  grid-row: 2;
+  grid-column: 1;
+  justify-items: end;
+  padding-right: 2vw;
+}
+.info .projects video {
+  box-sizing: border-box;
+}
+.info .projects video:hover {
+  box-shadow: 0px 0px 5px 1px #ededed;
+}
+
+.bottom-container {
+  background-color: black;
+  color: white;
+  height: 8vh;
+  text-align: center;
+  z-index: 10;
+  /* vertical-align: middle; */
+}
+.bottom-container h3 {
+  margin: auto;
+  color: gray;
+}
+.bottom-container .fab {
+  /* line-height: 100%; */
+  padding-top: 10px;
+  color: white;
+}
+.bottom-container .fab:hover {
+  color: #006eff;
+  /* cursor:none */
+}
+
+/*# sourceMappingURL=styles.css.map */
