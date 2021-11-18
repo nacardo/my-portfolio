@@ -9,19 +9,23 @@ var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
 // console.log(w, h);
-$(document).on("mousemove", (e) => {
-    $(".follower").css({
-        left: e.clientX,
-        top: e.clientY,
-    });
-});
+// $(document).on("mousemove", (e) => {
+//     $(".follower").css({
+//         left: e.clientX,
+//         top: e.clientY,
+//     });
+// });
 
-$(document).on("mousemove", (e) => {
-    $(".mouse-pointer").css({
-        left: e.clientX,
-        top: e.clientY,
-    });
-});
+// $(document).on("mousemove", (e) => {
+//     $(".mouse-pointer").css({
+//         left: e.clientX,
+//         top: e.clientY,
+//     });
+// });
+
+// window.addEventListener("mousedown", mousedown, false);
+
+// window.addEventListener("mouseup", mouseup, false);
 
 let tl = gsap.timeline();
 var rule = CSSRulePlugin.getRule(".landing"); //get the rule
@@ -36,8 +40,7 @@ tl.from("#prof-info", { x: -50, opacity: 0, duration: 1.5 }, "<+.5");
 ScrollTrigger.create({
     trigger: ".info",
     start: "top center",
-    action: "play pause",
-    markers: true,
+    // action: "play pause",
     onToggle: () => {
         $("video").trigger("play");
     },
