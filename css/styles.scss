@@ -13,6 +13,7 @@ body {
     scrollbar-width: none;
     scroll-snap-type: y proximity;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 // .follower {
@@ -302,7 +303,7 @@ h3 {
 .bottom-container {
     background-color: black;
     color: white;
-    height: 10vh;
+    height: 8vh;
     width: 100vw;
     text-align: center;
     z-index: 10;
@@ -454,5 +455,9 @@ h3 {
         height: 200px;
 
         // text-align: center;
+    }
+
+    .bottom-container {
+        height: 10vh;
     }
 }
