@@ -27,6 +27,12 @@ var windowHeight = window.innerHeight;
 
 // window.addEventListener("mouseup", mouseup, false);
 
+var video1 = $("#dtw-video video:first-child");
+video1.muted = true;
+
+var video2 = $("#cc-video video:first-child");
+video2.muted = true;
+
 let tl = gsap.timeline();
 var rule = CSSRulePlugin.getRule(".landing"); //get the rule
 // gsap.to(rule, {duration: 3, cssRule: {color: "blue"}});
